@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { React } from 'react';
-import './App.css';
+import './App.scss';
 import context from './core/context';
 import TextBox from './components/input';
 import AddButton from './components/addbutton';

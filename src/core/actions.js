@@ -8,6 +8,7 @@ const addTodo = ({ state }) => ({
 	todo: state.todo.concat({ text: state.input,
 		id: rndString(config.rndStringLength) }),
 	input: '',
+	iscompleted: state.iscompleted,
 });
 
 const actions = {
