@@ -1,7 +1,6 @@
 const seed = {
 	input: '',
-	todo: [],
-	iscompleted: false,
+	todos: [],
 };
 
 export default seed;

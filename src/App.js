@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { React } from 'react';
-import './App.scss';
+import './App.css';
 import context from './core/context';
 import TextBox from './components/input';
 import AddButton from './components/addbutton';
@@ -13,7 +13,7 @@ const App = () => {
 		<div> { TextBox() }</div>
 		<div> { AddButton() }</div>
 		<div> Input: { context.state.input }</div>
-		<div> Todo: { context.state.todo.map(Todo) }</div>
+		<div> Todo: { context.state.todos.map(Todo) }</div>
 	</div>;
 };
 
