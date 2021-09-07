@@ -14,9 +14,15 @@ const toggleTodo = (state, data) => ({
 			: { ...todo, iscompleted: !todo.iscompleted })),
 });
 
+const toggleAll = (state, ischecked) => ({
+	todos: state.todos.map((todo) =>
+		({ ...todo, completed: ischecked })),
+});
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
+	toggleAll,
 };
 
 export default TodoManager;
