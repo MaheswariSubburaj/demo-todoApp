@@ -16,7 +16,7 @@ const toggleTodo = (state, data) => ({
 
 const toggleAll = (state, ischecked) => ({
 	todos: state.todos.map((todo) =>
-		({ ...todo, completed: ischecked })),
+		({ ...todo, iscompleted: ischecked })),
 });
 
 const TodoManager = {

@@ -2,7 +2,7 @@ import { React } from 'react';
 import context from '../core/context';
 
 const getActiveChecked = (data) =>
-	data.filter((todo) => !todo.completed).length;
+	data.filter((todo) => !todo.iscompleted).length;
 
 const toggleAll = () => {
 	const ischecked = getActiveChecked(context.state.todos) === 0;

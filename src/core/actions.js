@@ -10,8 +10,8 @@ const addTodo = ({ state }) =>
 const toggleTodo = ({ state, data }) =>
 	TodoManager.toggleTodo(state, data);
 
-const toggleAll = ({ state, ischecked }) =>
-	TodoManager.toggleAll(state, ischecked);
+const toggleAll = ({ state, data }) =>
+	TodoManager.toggleAll(state, data);
 
 const actions = {
 	setInput,
