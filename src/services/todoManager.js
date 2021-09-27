@@ -19,10 +19,15 @@ const toggleAll = (state, ischecked) => ({
 		({ ...todo, iscompleted: ischecked })),
 });
 
+const clearCompleted = (state) => ({
+	todos: state.todos.filter((todo) => !todo.iscompleted),
+});
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
 	toggleAll,
+	clearCompleted,
 };
 
 export default TodoManager;

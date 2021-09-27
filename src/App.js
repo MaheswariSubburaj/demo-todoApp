@@ -6,6 +6,7 @@ import TextBox from './components/input';
 import AddButton from './components/addbutton';
 import Todo from './components/todo';
 import toggleAll from './components/toggleAlltodos';
+import clearCompleted from './components/clearCompleted';
 
 const App = () => {
 	console.log(context.state);
@@ -16,6 +17,7 @@ const App = () => {
 		<div> { AddButton() }</div>
 		<div> Input: { context.state.input }</div>
 		<div> Todo: { context.state.todos.map(Todo) }</div>
+		<div> { clearCompleted() } </div>
 	</div>;
 };
 
