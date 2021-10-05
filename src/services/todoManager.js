@@ -23,11 +23,15 @@ const clearCompleted = (state) => ({
 	todos: state.todos.filter((todo) => !todo.iscompleted),
 });
 
+const clearCompletedCount = (state) =>
+	state.todos.filter((todo) => todo.iscompleted).length;
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
 	toggleAll,
 	clearCompleted,
+	clearCompletedCount,
 };
 
 export default TodoManager;
