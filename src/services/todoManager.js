@@ -23,7 +23,7 @@ const clearCompleted = (state) => ({
 	todos: state.todos.filter((todo) => !todo.iscompleted),
 });
 
-const clearCompletedCount = (state) =>
+const getInactiveCount = (state) =>
 	state.todos.filter((todo) => todo.iscompleted).length;
 
 const filters = {
@@ -34,13 +34,16 @@ const filters = {
 
 const setFilter = (filter, todos) => todos.filter(filters[filter]);
 
+const getTodosCount = (data) => data.length;
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
 	toggleAll,
 	clearCompleted,
-	clearCompletedCount,
+	getInactiveCount,
 	setFilter,
+	getTodosCount,
 };
 
 export default TodoManager;
