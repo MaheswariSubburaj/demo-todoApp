@@ -4,6 +4,7 @@ import context from '../core/context';
 const AddButton = () => <div>
 
 	<button
+		disabled={ context.state.input === '' }
 		onClick={ () => context.actions.addTodo() }
 	>Add</button>
 </div>;
