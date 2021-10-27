@@ -14,7 +14,6 @@ const TextBox = () =>
 		onChange={ (evt) =>
 			context.actions.setInput(evt.target.value) }
 		onKeyUp={ (evt) => {
-			console.log(actionKeys[evt.code]);
 			actionKeys[evt.code] && actionKeys[evt.code]();
 		} }
 	/>;
