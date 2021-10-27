@@ -36,6 +36,9 @@ const setFilter = (filter, todos) => todos.filter(filters[filter]);
 
 const getTodosCount = (data) => data.length;
 
+const toDoRemoval = (todos, todo) => todos.filter((current) =>
+	current.id !== todo.id);
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
@@ -44,6 +47,7 @@ const TodoManager = {
 	getInactiveCount,
 	setFilter,
 	getTodosCount,
+	toDoRemoval,
 };
 
 export default TodoManager;

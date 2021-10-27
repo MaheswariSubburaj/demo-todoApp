@@ -10,7 +10,7 @@ import filterBar from './components/filterbar';
 import todoList from './components/todoList';
 
 const App = () => {
-	console.log(context.state);
+	console.log(context.state.todos);
 
 	return <div className="App">
 		<div> { toggleAll() }</div>
