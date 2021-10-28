@@ -5,12 +5,19 @@ const Todo = (todo) => {
 	const { id, text, iscompleted } = todo;
 
 	return <div key={ id }>
-		<input
-			type="checkbox"
-			checked={ iscompleted }
-			onChange={ () => context.actions.toggleTodo(todo) }
-		/>
-		{ text } </div>;
+		<span>
+			<input
+				type="checkbox"
+				checked={ iscompleted }
+				onChange={ () => context.actions.toggleTodo(todo) }
+			/>
+		</span>
+		{ text }
+		<span>
+			<button onClick={ () => context.actions.removeTodo(todo) }>
+				X</button>
+		</span>
+	</div>;
 };
 
 export default Todo;
