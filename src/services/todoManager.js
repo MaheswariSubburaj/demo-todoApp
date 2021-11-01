@@ -1,3 +1,4 @@
+/* eslint-disable function-paren-newline */
 import { rndString } from '@laufire/utils/random';
 import config from '../core/config';
 
@@ -39,6 +40,12 @@ const getTodosCount = (data) => data.length;
 const removeTodo = (todos, todo) => todos.filter((current) =>
 	current.id !== todo.id);
 
+const editTodo = (todos, editing, text) => todos.map((todo) =>
+	(todo.id !== editing.id
+		? todo
+		: { ...todo,
+			text }));
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
@@ -48,6 +55,7 @@ const TodoManager = {
 	setFilter,
 	getTodosCount,
 	removeTodo,
+	editTodo,
 };
 
 export default TodoManager;

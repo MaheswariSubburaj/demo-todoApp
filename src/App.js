@@ -8,6 +8,7 @@ import toggleAll from './components/toggleAlltodos';
 import clearCompleted from './components/clearCompleted';
 import filterBar from './components/filterbar';
 import todoList from './components/todoList';
+import EditButton from './components/editButton';
 
 const App = () => {
 	console.log(context.state);
@@ -20,6 +21,7 @@ const App = () => {
 		<div> Todos: { todoList() }</div>
 		<div> { clearCompleted() } </div>
 		<div> { filterBar() }</div>
+		<div> { EditButton() }</div>
 	</div>;
 };
 
