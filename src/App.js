@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import './App.scss';
 import TodoPane from './components';
-import context from './core/context';
+import TaskManager from './services/taskManager';
 
 const App = () => {
-	console.log(context.state);
+	useEffect(TaskManager.init2, []);
 
 	return <div className="App">
-		<div>{ TodoPane() }  </div>
+		<div> {TodoPane()} </div>
 	</div>;
 };
 
