@@ -5,7 +5,7 @@ import TodoPane from './components';
 import TaskManager from './services/taskManager';
 
 const App = () => {
-	useEffect(TaskManager.init2, []);
+	useEffect(TaskManager.init, []);
 
 	return <div className="App">
 		<div> {TodoPane()} </div>
