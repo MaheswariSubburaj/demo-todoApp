@@ -2,10 +2,10 @@
 import { rndString } from '@laufire/utils/random';
 import config from '../core/config';
 
-const addTodo = (state) => ({
-	todos: state.todos.concat({ text: state.input,
-		id: rndString(config.rndStringLength), iscompleted: false }),
-	input: '',
+const addTodo = (todos, input) => todos.concat({
+	text: input,
+	id: rndString(config.rndStringLength),
+	iscompleted: false,
 });
 
 const toggleTodo = (state, data) => ({
@@ -43,8 +43,10 @@ const removeTodo = (todos, todo) => todos.filter((current) =>
 const editTodo = (todos, editing, text) => todos.map((todo) =>
 	(todo.id !== editing.id
 		? todo
-		: { ...todo,
-			text }));
+		: {
+			...todo,
+			text,
+		}));
 
 const TodoManager = {
 	addTodo,

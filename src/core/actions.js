@@ -5,8 +5,10 @@ const setInput = ({ data }) => ({
 	input: data,
 });
 
-const addTodo = ({ state }) =>
-	TodoManager.addTodo(state);
+const addTodo = ({ state }) => ({
+	todos: TodoManager.addTodo(state.todos, state.input),
+	input: '',
+});
 
 const toggleTodo = ({ state, data }) =>
 	TodoManager.toggleTodo(state, data);
@@ -46,6 +48,10 @@ const removeTask = ({ state, data }) => ({
 	tasks: TaskManger.removeTask(state.tasks, data),
 });
 
+const addTaskTodo = ({ state, data }) => ({
+	todos: TodoManager.addTodo(state.todos, data.text),
+});
+
 const actions = {
 	setInput,
 	addTodo,
@@ -58,6 +64,7 @@ const actions = {
 	editTodo,
 	setTask,
 	removeTask,
+	addTaskTodo,
 };
 
 export default actions;
