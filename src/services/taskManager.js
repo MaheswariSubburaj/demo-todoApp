@@ -1,12 +1,18 @@
 import { rndString } from '@laufire/utils/random';
 import context from '../core/context';
 
+const getTask = (text) => ({
+	id: rndString(context.config.idLength),
+	text: text,
+
+});
+
 const taskManager = () => ({
 	init: () => context.actions.setTask([
-		{
-			id: rndString(context.config.idLength),
-			text: 'Task1',
-		},
+		getTask('Task1'),
+		getTask('Task2'),
+		getTask('Task3'),
+
 	]), // eslint-disable-line no-console
 });
 
