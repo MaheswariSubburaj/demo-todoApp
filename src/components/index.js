@@ -7,7 +7,16 @@ import filterBar from './filterbar';
 import ActionButton from './actionbutton';
 import todoList from './todoList';
 
-const TodoPane = () => <div className="todoPane">
+const style = {
+	position: 'absolute',
+	top: 0,
+	left: 0,
+	height: '100%',
+	width: '50%',
+	background: 'pink',
+};
+
+const TodoPane = () => <div style={ style }>
 	<span> { toggleAll() }</span>
 	<span> { TextBox() }</span>
 	<span> { ActionButton() }</span>
