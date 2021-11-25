@@ -7,6 +7,7 @@ const config = {
 	rndStringLength: 8,
 	idLength: 16,
 	tickerDelay: milliseconds * seconds,
+	minimumTaskCount: 3,
 };
 
 export default config;

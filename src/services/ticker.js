@@ -1,19 +1,17 @@
 import context from '../core/context';
 import config from '../core/config';
+import TaskRetriver from './taskRetriver';
 
-const ticker = () => {
-	const start = () => {
-		const { actions } = context;
-		const { tickerDelay } = config;
+const start = () => {
+	const { addTask } = context.actions;
+	const { tickerDelay } = config;
 
-		setInterval(() => {
-			actions.addTask('New Task');
-		}, tickerDelay);
-	};
-
-	return { start };
+	return setInterval(() =>
+		TaskRetriver.getTask().map(addTask), tickerDelay);
 };
 
-const Ticker = ticker();
+const Ticker = {
+	start,
+};
 
 export default Ticker;
