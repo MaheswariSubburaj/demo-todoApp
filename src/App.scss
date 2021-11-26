@@ -5,3 +5,25 @@
 		font-weight: bold;
 	}
 }
+
+.taskPane {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background: lightgreen;
+};
+
+.todoPane {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background: pink;	
+};
+
+.addbutton {
+	border-radius: 10px;
+}
